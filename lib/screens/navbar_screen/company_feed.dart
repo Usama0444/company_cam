@@ -95,6 +95,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
@@ -102,6 +103,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
@@ -109,6 +111,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Tab(text: ""),
@@ -131,6 +134,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
           child: Icon(
             Icons.filter_alt,
             size: 22.sp,
+            color: Colors.black,
           ),
         ),
       ),

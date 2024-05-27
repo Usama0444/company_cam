@@ -201,6 +201,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                   Text(
@@ -208,6 +209,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                   Text(
@@ -215,6 +217,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                   Text(
@@ -222,6 +225,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                   Text(
@@ -229,6 +233,7 @@ class _CameraCaptureScreenState extends State<CameraCaptureScreen> {
                     style: TextStyle(
                       fontSize: 15.sp,
                       fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                 ],

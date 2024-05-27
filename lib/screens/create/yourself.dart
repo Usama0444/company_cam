@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import 'business_types.dart';
+
 class Yourself extends StatefulWidget {
   @override
   _YourselfState createState() => _YourselfState();
@@ -22,7 +24,9 @@ class _YourselfState extends State<Yourself> {
   String? _howDidYouHear;
   String? _selectedCompanySize;
 
-  Widget _buildTextField(String label, ValueChanged<String> onChanged, {TextInputType keyboardType = TextInputType.text, bool obscureText = false}) {
+  Widget _buildTextField(String label, ValueChanged<String> onChanged,
+      {TextInputType keyboardType = TextInputType.text,
+      bool obscureText = false}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10.0),
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -57,15 +61,19 @@ class _YourselfState extends State<Yourself> {
             });
           },
           child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
             decoration: BoxDecoration(
-              color: _selectedCompanySize == size ? const Color.fromARGB(255, 3, 28, 48) : Colors.grey[200],
+              color: _selectedCompanySize == size
+                  ? const Color.fromARGB(255, 3, 28, 48)
+                  : Colors.grey[200],
               borderRadius: BorderRadius.circular(8.0),
             ),
             child: Text(
               size,
               style: TextStyle(
-                color: _selectedCompanySize == size ? Colors.white : Colors.black,
+                color:
+                    _selectedCompanySize == size ? Colors.white : Colors.black,
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
               ),
@@ -186,7 +194,7 @@ class _YourselfState extends State<Yourself> {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        Get.to(LoginScreen());
+                        Get.to(BusinessTypeSelectionScreen());
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue[900],
@@ -195,7 +203,7 @@ class _YourselfState extends State<Yourself> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          fixedSize: const Size(double.infinity, 50)),
+                          fixedSize: const Size(double.infinity, 55)),
                       child: Text(
                         'Continue',
                         style: TextStyle(

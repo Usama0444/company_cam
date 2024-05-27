@@ -36,7 +36,8 @@ class HomePage extends StatelessWidget {
                 ),
                 Text(
                   '14 days left!',
-                  style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold),
+                  style:
+                      TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -82,7 +83,8 @@ class HomePage extends StatelessWidget {
                     Icon(Icons.photo_camera, size: 30.sp, color: Colors.blue),
                     const SizedBox(width: 10),
                     const Expanded(
-                      child: Text('Find projects where you recently took pictures.'),
+                      child: Text(
+                          'Find projects where you recently took pictures.'),
                     ),
                   ],
                 ),
@@ -96,7 +98,8 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Nearby Projects   ',
-                      style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 18.sp, fontWeight: FontWeight.bold),
                     ),
                     const Icon(
                       Icons.arrow_forward_ios,
@@ -155,7 +158,8 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Company Feed  ',
-                      style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 18.sp, fontWeight: FontWeight.bold),
                     ),
                     const Icon(
                       Icons.arrow_forward_ios,

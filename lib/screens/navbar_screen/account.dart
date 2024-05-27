@@ -1,5 +1,7 @@
+import 'package:company_cam/screens/profile_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -60,21 +62,26 @@ class _AccountScreenState extends State<AccountScreen> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-            title: Row(
-              children: [
-                Text(
-                  'Abc Qn',
-                  style: TextStyle(
-                    fontSize: 20.sp,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+            title: GestureDetector(
+              onTap: () {
+                Get.to(ProfilePage());
+              },
+              child: Row(
+                children: [
+                  Text(
+                    'Lorum Ipsum',
+                    style: TextStyle(
+                      fontSize: 20.sp,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Icon(
-                  Icons.arrow_drop_down,
-                  size: 40,
-                )
-              ],
+                  Icon(
+                    Icons.arrow_drop_down,
+                    size: 40,
+                  )
+                ],
+              ),
             ),
             actions: [
               IconButton(
@@ -103,6 +110,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
@@ -110,6 +118,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Text(
@@ -117,6 +126,7 @@ class _AccountScreenState extends State<AccountScreen> {
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
                     ),
                     Tab(text: ""),
@@ -139,6 +149,7 @@ class _AccountScreenState extends State<AccountScreen> {
           child: Icon(
             Icons.filter_alt,
             size: 22.sp,
+            color: Colors.black,
           ),
         ),
       ),

@@ -14,7 +14,9 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool obsc = true;
-  Widget _buildTextField(String label, ValueChanged<String> onChanged, {TextInputType keyboardType = TextInputType.text, bool obscureText = false}) {
+  Widget _buildTextField(String label, ValueChanged<String> onChanged,
+      {TextInputType keyboardType = TextInputType.text,
+      bool obscureText = false}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 10.0),
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -51,6 +53,8 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         leading: GestureDetector(
           onTap: () {
             Get.back();
@@ -93,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          fixedSize: const Size(double.infinity, 52)),
+                          fixedSize: const Size(double.infinity, 55)),
                       child: Text(
                         'Sign in',
                         style: TextStyles.h3?.copyWith(
@@ -151,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          fixedSize: const Size(double.infinity, 53)),
+                          fixedSize: const Size(double.infinity, 55)),
                       child: Text(
                         'Single Sign-On',
                         style: TextStyles.h3?.copyWith(

@@ -1,14 +1,17 @@
 import 'package:company_cam/core/Text_styles.dart';
+import 'package:company_cam/screens/create/ask_location.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class BusinessTypeSelectionScreen extends StatefulWidget {
   @override
-  _BusinessTypeSelectionScreenState createState() => _BusinessTypeSelectionScreenState();
+  _BusinessTypeSelectionScreenState createState() =>
+      _BusinessTypeSelectionScreenState();
 }
 
-class _BusinessTypeSelectionScreenState extends State<BusinessTypeSelectionScreen> {
+class _BusinessTypeSelectionScreenState
+    extends State<BusinessTypeSelectionScreen> {
   // List of business types
   final List<String> _businessTypes = [
     'Concrete',
@@ -46,7 +49,8 @@ class _BusinessTypeSelectionScreenState extends State<BusinessTypeSelectionScree
                   child: Text(
                     'We\'ll use this to personalize your experience.',
                     maxLines: 2,
-                    style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.normal),
+                    style: TextStyle(
+                        fontSize: 18.sp, fontWeight: FontWeight.normal),
                   ),
                 ),
               ],
@@ -62,7 +66,9 @@ class _BusinessTypeSelectionScreenState extends State<BusinessTypeSelectionScree
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 50),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(AskLocation());
+          },
           style: ElevatedButton.styleFrom(
               backgroundColor: Colors.blue[900],
               padding: const EdgeInsets.symmetric(vertical: 16),
@@ -91,7 +97,8 @@ class _BusinessTypeSelectionScreenState extends State<BusinessTypeSelectionScree
                 ListTile(
                   title: Text(
                     _businessTypes[index],
-                    style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
                   ),
                   leading: Radio<String>(
                     value: _businessTypes[index],

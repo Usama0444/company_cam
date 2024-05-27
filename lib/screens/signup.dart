@@ -18,7 +18,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   String _password = '';
   bool checkbox = false;
   bool obsc = true;
-  Widget _buildTextField(String label, ValueChanged<String> onChanged, {TextInputType keyboardType = TextInputType.text, bool obscureText = false}) {
+  Widget _buildTextField(String label, ValueChanged<String> onChanged,
+      {TextInputType keyboardType = TextInputType.text,
+      bool obscureText = false}) {
     return Container(
       margin: EdgeInsets.only(bottom: 10.0),
       padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -157,7 +159,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
-                          fixedSize: const Size(double.infinity, 50)),
+                          fixedSize: const Size(double.infinity, 55)),
                       child: Text(
                         'Get Started',
                         style: TextStyles.h3?.copyWith(

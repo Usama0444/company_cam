@@ -28,7 +28,8 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   'AVR quality control',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 19.sp, fontWeight: FontWeight.bold),
+                  style:
+                      TextStyle(fontSize: 19.sp, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -49,7 +50,8 @@ class WelcomeScreen extends StatelessWidget {
                       'Capture, organize, and share job photos from anywhere.',
                       textAlign: TextAlign.center,
                       maxLines: 3,
-                      style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 20.sp, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -67,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  fixedSize: const Size(double.infinity, 50)),
+                  fixedSize: const Size(double.infinity, 55)),
               child: Text(
                 'Get Started for Free',
                 style: TextStyles.textStyle?.copyWith(
@@ -87,7 +89,7 @@ class WelcomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
-                  fixedSize: const Size(double.infinity, 52)),
+                  fixedSize: const Size(double.infinity, 55)),
               child: Text(
                 'Sign In',
                 style: TextStyles.textStyle1?.copyWith(
