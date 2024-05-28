@@ -1,4 +1,4 @@
-import 'package:company_cam/screens/home.dart';
+import 'package:company_cam/screens/home/home.dart';
 import 'package:company_cam/screens/navbar_screen/account.dart';
 import 'package:company_cam/screens/navbar_screen/camera_capture.dart';
 import 'package:company_cam/screens/navbar_screen/company_feed.dart';
@@ -9,7 +9,8 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class MyBottomNavBar extends StatelessWidget {
-  final PersistentTabController _controller = PersistentTabController(initialIndex: 0);
+  final PersistentTabController _controller =
+      PersistentTabController(initialIndex: 0);
 
   List<Widget> _buildScreens() {
     return [
@@ -80,9 +81,11 @@ class MyBottomNavBar extends StatelessWidget {
         confineInSafeArea: true,
         backgroundColor: Colors.white, // Default is Colors.white.
         handleAndroidBackButtonPress: true, // Default is true.
-        resizeToAvoidBottomInset: true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
+        resizeToAvoidBottomInset:
+            true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
         stateManagement: true, // Default is true.
-        hideNavigationBarWhenKeyboardShows: true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
+        hideNavigationBarWhenKeyboardShows:
+            true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
         decoration: NavBarDecoration(
           borderRadius: BorderRadius.circular(10.0),
           colorBehindNavBar: Colors.white,
@@ -100,7 +103,8 @@ class MyBottomNavBar extends StatelessWidget {
           curve: Curves.ease,
           duration: Duration(milliseconds: 200),
         ),
-        navBarStyle: NavBarStyle.style15, // Choose the nav bar style with this property.
+        navBarStyle:
+            NavBarStyle.style15, // Choose the nav bar style with this property.
       ),
     );
   }

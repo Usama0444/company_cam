@@ -39,6 +39,7 @@ dependencies:
   responsive_sizer: ^3.1.1
   dotted_border:
   persistent_bottom_nav_bar: ^5.0.2
+  image_picker:
 
 dev_dependencies:
   flutter_test:

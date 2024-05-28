@@ -1,6 +1,6 @@
 import 'package:company_cam/core/Text_styles.dart';
 import 'package:company_cam/screens/create/yourself.dart';
-import 'package:company_cam/screens/home.dart';
+import 'package:company_cam/screens/home/home.dart';
 import 'package:company_cam/screens/signup.dart';
 import 'package:company_cam/screens/widget/bottom_nav.dart';
 import 'package:flutter/material.dart';
