@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+    //
     return ResponsiveSizer(builder: (context, o, index) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
