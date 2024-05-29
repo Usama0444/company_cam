@@ -1,4 +1,6 @@
+import 'package:company_cam/screens/setting.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class NotificationsPage extends StatefulWidget {
@@ -56,7 +58,9 @@ class _NotificationsPageState extends State<NotificationsPage>
                 Icons.settings,
                 size: 30,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(SettingPage());
+              },
             ),
             IconButton(
               icon: const Icon(

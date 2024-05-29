@@ -1,6 +1,7 @@
 import 'package:company_cam/core/Text_styles.dart';
 import 'package:company_cam/screens/home/home_controller.dart';
 import 'package:company_cam/screens/profile_info.dart';
+import 'package:company_cam/screens/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -71,7 +72,9 @@ class _AccountScreenState extends State<AccountScreen> {
                   Icons.settings,
                   size: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(SettingPage());
+                },
               ),
               IconButton(
                 icon: const Icon(
@@ -152,7 +155,8 @@ class PhotosTab extends StatelessWidget {
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   child: Row(
                     children: [
                       Text(
@@ -196,11 +200,13 @@ class PhotosTab extends StatelessWidget {
                         height: 150,
                         child: GridView.builder(
                           padding: EdgeInsets.zero,
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             mainAxisSpacing: 10.0,
                             crossAxisSpacing: 10.0,
-                            childAspectRatio: Get.width / (Get.height - Get.height * 0.45),
+                            childAspectRatio:
+                                Get.width / (Get.height - Get.height * 0.45),
                           ),
                           itemCount: 1,
                           itemBuilder: (context, index) {
@@ -223,29 +229,34 @@ class PhotosTab extends StatelessWidget {
                                       )),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         width: 50,
                                         height: 30,
                                         decoration: BoxDecoration(
                                           color: Colors.black.withOpacity(0.3),
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                         ),
                                         child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
                                           children: [
                                             Container(
                                               width: 20,
                                               height: 20,
                                               decoration: BoxDecoration(
                                                 color: Colors.white,
-                                                borderRadius: BorderRadius.circular(10),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Center(
                                                 child: Text(
                                                   'US',
-                                                  style: TextStyles.textStyle1?.copyWith(fontSize: 12),
+                                                  style: TextStyles.textStyle1
+                                                      ?.copyWith(fontSize: 12),
                                                 ),
                                               ),
                                             ),
@@ -267,7 +278,8 @@ class PhotosTab extends StatelessWidget {
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   child: Row(
                     children: [
                       Text(
@@ -311,11 +323,13 @@ class PhotosTab extends StatelessWidget {
                         height: 200,
                         child: GridView.builder(
                           padding: EdgeInsets.zero,
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             mainAxisSpacing: 10.0,
                             crossAxisSpacing: 10.0,
-                            childAspectRatio: Get.width / (Get.height - Get.height * 0.45),
+                            childAspectRatio:
+                                Get.width / (Get.height - Get.height * 0.45),
                           ),
                           itemCount: 2,
                           itemBuilder: (context, index) {
@@ -337,7 +351,8 @@ class PhotosTab extends StatelessWidget {
                                         color: Colors.grey,
                                       )),
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       index == 0
                                           ? Column(
@@ -354,30 +369,40 @@ class PhotosTab extends StatelessWidget {
                                             )
                                           : const SizedBox(),
                                       Row(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Container(
                                             width: 50,
                                             height: 30,
                                             decoration: BoxDecoration(
-                                              color: Colors.black.withOpacity(0.3),
-                                              borderRadius: BorderRadius.circular(10),
+                                              color:
+                                                  Colors.black.withOpacity(0.3),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
                                             ),
                                             child: Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
                                               children: [
                                                 Container(
                                                   width: 20,
                                                   height: 20,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
-                                                    borderRadius: BorderRadius.circular(10),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
                                                   ),
                                                   child: Center(
                                                     child: Text(
                                                       'US',
-                                                      style: TextStyles.textStyle1?.copyWith(fontSize: 12),
+                                                      style: TextStyles
+                                                          .textStyle1
+                                                          ?.copyWith(
+                                                              fontSize: 12),
                                                     ),
                                                   ),
                                                 ),
@@ -429,7 +454,8 @@ class ProjectsTab extends StatelessWidget {
                     children: [
                       const ListTile(
                         title: Text('United States'),
-                        subtitle: Text('America, America • Vergenia, California ...'),
+                        subtitle:
+                            Text('America, America • Vergenia, California ...'),
                         trailing: Icon(Icons.camera_alt),
                       ),
                       const Divider(
@@ -439,11 +465,15 @@ class ProjectsTab extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20, top: 10),
                         child: Text(
                           '1 Photo . 0 Ducuments',
-                          style: TextStyles.textStyle1?.copyWith(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.w500),
+                          style: TextStyles.textStyle1?.copyWith(
+                              fontSize: 14,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 20),
                         child: Stack(
                           children: [
                             SizedBox(
@@ -451,11 +481,13 @@ class ProjectsTab extends StatelessWidget {
                               height: Get.height * 0.2,
                               child: GridView.builder(
                                 padding: EdgeInsets.zero,
-                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                gridDelegate:
+                                    SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 3,
                                   mainAxisSpacing: 10.0,
                                   crossAxisSpacing: 10.0,
-                                  childAspectRatio: Get.width / (Get.height - Get.height * 0.3),
+                                  childAspectRatio: Get.width /
+                                      (Get.height - Get.height * 0.3),
                                 ),
                                 itemCount: 1,
                                 itemBuilder: (context, index) {
@@ -472,41 +504,55 @@ class ProjectsTab extends StatelessWidget {
                                               fit: BoxFit.cover,
                                             ),
                                             color: Colors.white,
-                                            borderRadius: BorderRadius.circular(10),
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                             border: Border.all(
                                               color: Colors.grey,
                                             )),
                                         child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.end,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.end,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Container(
                                               width: 50,
                                               height: 30,
                                               decoration: BoxDecoration(
-                                                color: Colors.black.withOpacity(0.3),
-                                                borderRadius: BorderRadius.circular(10),
+                                                color: Colors.black
+                                                    .withOpacity(0.3),
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
                                               ),
                                               child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceAround,
                                                 children: [
                                                   Container(
                                                     width: 20,
                                                     height: 20,
                                                     decoration: BoxDecoration(
                                                       color: Colors.white,
-                                                      borderRadius: BorderRadius.circular(10),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
                                                     ),
                                                     child: Center(
                                                       child: Text(
                                                         'US',
-                                                        style: TextStyles.textStyle1?.copyWith(fontSize: 12),
+                                                        style: TextStyles
+                                                            .textStyle1
+                                                            ?.copyWith(
+                                                                fontSize: 12),
                                                       ),
                                                     ),
                                                   ),
                                                   Text(
                                                     '2D',
-                                                    style: TextStyles.textStyle?.copyWith(fontSize: 12),
+                                                    style: TextStyles.textStyle
+                                                        ?.copyWith(
+                                                            fontSize: 12),
                                                   ),
                                                 ],
                                               ),
