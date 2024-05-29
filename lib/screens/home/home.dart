@@ -47,8 +47,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Text(
                       '14 days left!',
-                      style: TextStyle(
-                          fontSize: 15.sp, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -76,8 +75,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Text(
                   'Jump Back In',
-                  style:
-                      TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
                 DottedBorder(
@@ -92,12 +90,10 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
-                        Icon(Icons.photo_camera,
-                            size: 30.sp, color: Colors.blue),
+                        Icon(Icons.photo_camera, size: 30.sp, color: Colors.blue),
                         const SizedBox(width: 10),
                         const Expanded(
-                          child: Text(
-                              'Find projects where you recently took pictures.'),
+                          child: Text('Find projects where you recently took pictures.'),
                         ),
                       ],
                     ),
@@ -111,8 +107,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(
                           'Nearby Projects   ',
-                          style: TextStyle(
-                              fontSize: 18.sp, fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
                         ),
                         const Icon(
                           Icons.arrow_forward_ios,
@@ -149,8 +144,7 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: Row(
                       children: [
-                        Icon(Icons.local_shipping,
-                            size: 30.sp, color: Colors.blue),
+                        Icon(Icons.local_shipping, size: 30.sp, color: Colors.blue),
                         const SizedBox(width: 10),
                         Expanded(
                           child: Text(
@@ -172,8 +166,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(
                           'Company Feed  ',
-                          style: TextStyle(
-                              fontSize: 18.sp, fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
                         ),
                         const Icon(
                           Icons.arrow_forward_ios,
@@ -219,26 +212,22 @@ class HomePage extends StatelessWidget {
                               child: Center(
                                 child: Row(
                                   children: [
-                                    Icon(Icons.business,
-                                        size: 30.sp, color: Colors.blue),
+                                    Icon(Icons.business, size: 30.sp, color: Colors.blue),
                                     const SizedBox(width: 10),
                                     Expanded(
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             'No Projects Yet.',
-                                            style:
-                                                TextStyles.textStyle1?.copyWith(
+                                            style: TextStyles.textStyle1?.copyWith(
                                               fontSize: 18.sp,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
                                           Text(
                                             'Find the latest projects created at your company here.',
-                                            style:
-                                                TextStyles.textStyle1?.copyWith(
+                                            style: TextStyles.textStyle1?.copyWith(
                                               fontSize: 16.sp,
                                             ),
                                           ),
@@ -276,21 +265,18 @@ class HomePage extends StatelessWidget {
                                   const SizedBox(width: 10),
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'No Projects Yet.',
-                                          style:
-                                              TextStyles.textStyle1?.copyWith(
+                                          style: TextStyles.textStyle1?.copyWith(
                                             fontSize: 18.sp,
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
                                         Text(
                                           'Every photo is mapped at your project location.',
-                                          style:
-                                              TextStyles.textStyle1?.copyWith(
+                                          style: TextStyles.textStyle1?.copyWith(
                                             fontSize: 16.sp,
                                           ),
                                         ),
@@ -324,8 +310,7 @@ class HomePage extends StatelessWidget {
                                         color: Colors.grey,
                                       )),
                                   child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(
                                         width: double.infinity,
@@ -344,8 +329,7 @@ class HomePage extends StatelessWidget {
                                       Padding(
                                         padding: const EdgeInsets.all(10),
                                         child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'United States',
@@ -368,9 +352,7 @@ class HomePage extends StatelessWidget {
                                               height: 10,
                                             ),
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 Icon(
                                                   Icons.camera_alt,
@@ -408,8 +390,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15, vertical: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                             child: Stack(
                               children: [
                                 SizedBox(
@@ -417,15 +398,13 @@ class HomePage extends StatelessWidget {
                                   height: 300,
                                   child: GridView.builder(
                                     padding: EdgeInsets.zero,
-                                    gridDelegate:
-                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 3,
                                       mainAxisSpacing: 10.0,
                                       crossAxisSpacing: 10.0,
-                                      childAspectRatio: Get.width /
-                                          (Get.height - Get.height * 0.3),
+                                      childAspectRatio: Get.width / (Get.height - Get.height * 0.3),
                                     ),
-                                    itemCount: 2,
+                                    itemCount: 1,
                                     itemBuilder: (context, index) {
                                       return InkWell(
                                         onTap: () {},
@@ -440,59 +419,41 @@ class HomePage extends StatelessWidget {
                                                   fit: BoxFit.cover,
                                                 ),
                                                 color: Colors.white,
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
+                                                borderRadius: BorderRadius.circular(10),
                                                 border: Border.all(
                                                   color: Colors.grey,
                                                 )),
                                             child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.end,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment: MainAxisAlignment.end,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Container(
                                                   width: 50,
                                                   height: 30,
                                                   decoration: BoxDecoration(
-                                                    color: Colors.black
-                                                        .withOpacity(0.3),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10),
+                                                    color: Colors.black.withOpacity(0.3),
+                                                    borderRadius: BorderRadius.circular(10),
                                                   ),
                                                   child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceAround,
+                                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                                                     children: [
                                                       Container(
                                                         width: 20,
                                                         height: 20,
-                                                        decoration:
-                                                            BoxDecoration(
+                                                        decoration: BoxDecoration(
                                                           color: Colors.white,
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(10),
+                                                          borderRadius: BorderRadius.circular(10),
                                                         ),
                                                         child: Center(
                                                           child: Text(
                                                             'US',
-                                                            style: TextStyles
-                                                                .textStyle1
-                                                                ?.copyWith(
-                                                                    fontSize:
-                                                                        12),
+                                                            style: TextStyles.textStyle1?.copyWith(fontSize: 12),
                                                           ),
                                                         ),
                                                       ),
                                                       Text(
                                                         '2D',
-                                                        style: TextStyles
-                                                            .textStyle
-                                                            ?.copyWith(
-                                                                fontSize: 12),
+                                                        style: TextStyles.textStyle?.copyWith(fontSize: 12),
                                                       ),
                                                     ],
                                                   ),

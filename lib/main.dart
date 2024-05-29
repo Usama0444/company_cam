@@ -31,14 +31,11 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            iconTheme: IconThemeData(
-                color: Colors.black), // optional: to set icon colors
-            titleTextStyle: TextStyle(
-                color: Colors.black,
-                fontSize: 20), // optional: to set title text style
+            iconTheme: IconThemeData(color: Colors.black), // optional: to set icon colors
+            titleTextStyle: TextStyle(color: Colors.black, fontSize: 20), // optional: to set title text style
           ),
         ),
-        home: MyBottomNavBar(),
+        home: WelcomeScreen(),
       );
     });
   }
