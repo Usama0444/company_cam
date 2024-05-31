@@ -4,6 +4,7 @@ import 'package:company_cam/screens/navbar_screen/notification.dart';
 import 'package:company_cam/screens/profile_info.dart';
 import 'package:company_cam/screens/project_info/collaburattors.dart';
 import 'package:company_cam/screens/project_info/create_share.dart';
+import 'package:company_cam/screens/project_info/project_detail.dart';
 import 'package:company_cam/screens/widget/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 20), // optional: to set title text style
           ),
         ),
-        home: const CollaburatorsScreen(),
+        home: ProjectDetails(),
       );
     });
   }
