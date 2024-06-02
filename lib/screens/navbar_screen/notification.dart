@@ -1,4 +1,4 @@
-import 'package:company_cam/screens/setting.dart';
+import 'package:company_cam/screens/setting/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';

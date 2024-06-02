@@ -1,3 +1,11 @@
+import 'package:company_cam/screens/setting/StoredResourcesScreen.dart';
+import 'package:company_cam/screens/setting/billing.dart';
+import 'package:company_cam/screens/setting/camera_setting.dart';
+import 'package:company_cam/screens/setting/location_setting.dart';
+import 'package:company_cam/screens/setting/manage_account.dart';
+import 'package:company_cam/screens/setting/notification_setting.dart';
+import 'package:company_cam/screens/setting/technical.dart';
+import 'package:company_cam/screens/setting/upload_setting.dart';
 import 'package:company_cam/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,15 +46,32 @@ class SettingPage extends StatelessWidget {
           ),
         ),
         const Divider(),
-        commonWidget(title: 'Camera'),
+        GestureDetector(
+            onTap: () {
+              Get.to(CameraSetting());
+            },
+            child: commonWidget(title: 'Camera')),
         const Divider(),
-        commonWidget(title: 'Location'),
+        GestureDetector(
+            onTap: () {
+              Get.to(LocationSetting());
+            },
+            child: commonWidget(title: 'Location')),
         const Divider(),
-        commonWidget(title: 'Notification'),
+        GestureDetector(
+            onTap: () {
+              Get.to(NotificationSetting());
+            },
+            child: commonWidget(title: 'Notification')),
         const Divider(),
-        commonWidget(title: 'Open Device Setting'),
+        GestureDetector(
+            onTap: () {}, child: commonWidget(title: 'Open Device Setting')),
         const Divider(),
-        commonWidget(title: 'Uploads'),
+        GestureDetector(
+            onTap: () {
+              Get.to(UploadSetting());
+            },
+            child: commonWidget(title: 'Uploads')),
         const Divider(),
         Padding(
           padding: EdgeInsets.only(left: 15.sp, top: 20),
@@ -60,13 +85,29 @@ class SettingPage extends StatelessWidget {
           ),
         ),
         const Divider(),
-        commonWidget(title: 'Billing'),
+        GestureDetector(
+            onTap: () {
+              Get.to(BillingScreen());
+            },
+            child: commonWidget(title: 'Billing')),
         const Divider(),
-        commonWidget(title: 'Manage Accounts'),
+        GestureDetector(
+            onTap: () {
+              Get.to(ManageAccounts());
+            },
+            child: commonWidget(title: 'Manage Accounts')),
         const Divider(),
-        commonWidget(title: 'Stored Resources'),
+        GestureDetector(
+            onTap: () {
+              Get.to(StoredResourcesScreen());
+            },
+            child: commonWidget(title: 'Stored Resources')),
         const Divider(),
-        commonWidget(title: 'Technical'),
+        GestureDetector(
+            onTap: () {
+              Get.to(TechnicalScreen());
+            },
+            child: commonWidget(title: 'Technical')),
         const Divider(),
         Padding(
           padding: EdgeInsets.only(left: 15.sp, top: 20),
@@ -193,16 +234,21 @@ class SettingPage extends StatelessWidget {
     );
   }
 
-  commonWidget({title}) {
-    return ListTile(
-      onTap: () {},
-      leading: Text(
-        title,
-        style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.normal),
-      ),
-      trailing: const Icon(
-        Icons.arrow_forward_ios,
-        size: 20,
+  Widget commonWidget({title}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.normal),
+          ),
+          const Icon(
+            Icons.arrow_forward_ios,
+            size: 20,
+          ),
+        ],
       ),
     );
   }

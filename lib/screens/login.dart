@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
               : const SizedBox(),
         ),
         keyboardType: keyboardType,
-        obscureText: obsc,
+        obscureText: label == 'Password' ? obsc : false,
         onChanged: onChanged,
       ),
     );
