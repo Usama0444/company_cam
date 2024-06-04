@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:company_cam/core/Text_styles.dart';
 import 'package:company_cam/screens/home/home_controller.dart';
+import 'package:company_cam/screens/project_info/project_detail.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -459,78 +460,85 @@ class HomePage extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 15),
                             child: Stack(
                               children: [
-                                Container(
-                                  width: double.infinity,
-                                  height: 310,
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(10),
-                                      border: Border.all(
-                                        color: Colors.grey,
-                                      )),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        width: double.infinity,
-                                        height: 180,
-                                        child: ClipRRect(
-                                          borderRadius: const BorderRadius.only(
-                                            topLeft: Radius.circular(10),
-                                            topRight: Radius.circular(10),
-                                          ),
-                                          child: Image.file(
-                                            controller.image!,
-                                            fit: BoxFit.cover,
+                                InkWell(
+                                  onTap: () {
+                                    Get.to(ProjectDetails());
+                                  },
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: 310,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Colors.grey,
+                                        )),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          width: double.infinity,
+                                          height: 180,
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                const BorderRadius.only(
+                                              topLeft: Radius.circular(10),
+                                              topRight: Radius.circular(10),
+                                            ),
+                                            child: Image.file(
+                                              controller.image!,
+                                              fit: BoxFit.cover,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(10),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              'United States',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 20.sp,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            Text(
-                                              'America,America ,Vergina,California....',
-                                              style: TextStyle(
-                                                color: Colors.black,
-                                                fontSize: 18.sp,
-                                                overflow: TextOverflow.ellipsis,
-                                                fontWeight: FontWeight.normal,
-                                              ),
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Icon(
-                                                  Icons.camera_alt,
-                                                  color: Colors.blue[400],
-                                                  size: 30,
+                                        Padding(
+                                          padding: const EdgeInsets.all(10),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'United States',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 20.sp,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
-                                                const Icon(
-                                                  Icons.more_horiz,
+                                              ),
+                                              Text(
+                                                'America,America ,Vergina,California....',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 18.sp,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
+                                                  fontWeight: FontWeight.normal,
                                                 ),
-                                              ],
-                                            )
-                                          ],
+                                              ),
+                                              const SizedBox(
+                                                height: 10,
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Icon(
+                                                    Icons.camera_alt,
+                                                    color: Colors.blue[400],
+                                                    size: 30,
+                                                  ),
+                                                  const Icon(
+                                                    Icons.more_horiz,
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 Positioned(

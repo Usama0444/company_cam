@@ -17,7 +17,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    PhotosTab(),
+    const PhotosTab(),
     ProjectsTab(),
     Padding(
       padding: const EdgeInsets.only(top: 30, left: 120),
@@ -71,9 +71,9 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
               ),
             ],
             bottom: PreferredSize(
-              preferredSize: Size(double.infinity, 60),
+              preferredSize: const Size(double.infinity, 60),
               child: Padding(
-                padding: EdgeInsets.only(right: 0.0),
+                padding: const EdgeInsets.only(right: 0.0),
                 child: TabBar(
                   tabs: <Widget>[
                     Text(
@@ -100,7 +100,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
                         color: Colors.black,
                       ),
                     ),
-                    Tab(text: ""),
+                    const Tab(text: ""),
                   ],
                 ),
               ),
@@ -435,19 +435,19 @@ class ProjectsTab extends StatelessWidget {
             //       )
             //     :
             ListView(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           children: [
             Card(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
+                  const ListTile(
                     title: Text('United States'),
                     subtitle:
                         Text('America, America • Vergenia, California ...'),
                     trailing: Icon(Icons.camera_alt),
                   ),
-                  Divider(
+                  const Divider(
                     height: 4,
                   ),
                   Padding(
@@ -481,12 +481,14 @@ class ProjectsTab extends StatelessWidget {
                             itemCount: 1,
                             itemBuilder: (context, index) {
                               return InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Get.to(PhotoEditorScreen());
+                                },
                                 child: Container(
                                     height: 100,
                                     width: 50,
                                     decoration: BoxDecoration(
-                                        image: DecorationImage(
+                                        image: const DecorationImage(
                                           image: AssetImage(
                                             'assets/dummy1.jpeg',
                                           ),
@@ -553,15 +555,15 @@ class ProjectsTab extends StatelessWidget {
                     alignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.star_border),
+                        icon: const Icon(Icons.star_border),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.share),
+                        icon: const Icon(Icons.share),
                         onPressed: () {},
                       ),
                       IconButton(
-                        icon: Icon(Icons.more_horiz),
+                        icon: const Icon(Icons.more_horiz),
                         onPressed: () {},
                       ),
                     ],
@@ -572,6 +574,372 @@ class ProjectsTab extends StatelessWidget {
           ],
         );
       }),
+    );
+  }
+}
+
+class PhotoEditorScreen extends StatelessWidget {
+  const PhotoEditorScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Username',
+              style: TextStyles.textStyle,
+            ),
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.white,
+              size: 16.sp,
+            ),
+          ],
+        ),
+        centerTitle: true,
+        actions: const [
+          Icon(
+            Icons.info_outline,
+            color: Colors.white,
+          )
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/house.png',
+              height: Get.height * 0.65,
+              fit: BoxFit.fitHeight,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100.withOpacity(0.5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Text(
+                      'US',
+                      style: TextStyles.textStyle,
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'User Name',
+                      style: TextStyles.textStyle,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      '05/02/2024 . 3:45 PM',
+                      style: TextStyles.textStyle?.copyWith(fontSize: 14.sp),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            SizedBox(
+              height: Get.height * 0.05,
+              child: TextField(
+                style: TextStyles.textStyle?.copyWith(fontSize: 16.sp),
+                decoration: InputDecoration(
+                    prefixIcon: const Icon(
+                      Icons.subject,
+                      color: Colors.white,
+                    ),
+                    hintText: 'Add a description...',
+                    hintStyle: TextStyles.textStyle?.copyWith(fontSize: 16.sp)),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        context: context,
+                        backgroundColor: Colors.transparent,
+                        builder: (builder) => addComment());
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.comment,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        context: context,
+                        backgroundColor: Colors.transparent,
+                        builder: (builder) => addTag());
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.sell,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100.withOpacity(0.5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.edit,
+                    color: Colors.white,
+                  ),
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100.withOpacity(0.5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.check_circle_outline,
+                    color: Colors.white,
+                  ),
+                ),
+                Container(
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100.withOpacity(0.5),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.more_horiz,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container addComment() {
+    return Container(
+      height: 300,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.close)),
+                    Text(
+                      'Comment',
+                      style: TextStyles.h3,
+                    ),
+                    const SizedBox(),
+                  ],
+                ),
+                const Divider(),
+              ],
+            ),
+            Column(
+              children: [
+                Text(
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                  style: TextStyles.h4?.copyWith(color: Colors.grey),
+                ),
+                Text(
+                  'Lorem ipsum dolor sit amet,',
+                  style: TextStyles.h4?.copyWith(
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: Get.height * 0.05,
+                  child: TextField(
+                    style: TextStyles.textStyle?.copyWith(fontSize: 16.sp),
+                    decoration: InputDecoration(
+                        suffixIcon: ElevatedButton(
+                            onPressed: () {}, child: const Text('Post')),
+                        hintText: 'Type to add comment...',
+                        border: InputBorder.none,
+                        hintStyle: TextStyles.textStyle1
+                            ?.copyWith(fontSize: 17.sp, color: Colors.grey)),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '@',
+                      style: TextStyles.h1?.copyWith(color: Colors.blue),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container addTag() {
+    return Container(
+      height: Get.height * 0.9,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.close)),
+                    Text(
+                      'Tag',
+                      style: TextStyles.h3,
+                    ),
+                    const SizedBox(),
+                  ],
+                ),
+                const Divider(),
+              ],
+            ),
+            Column(
+              children: [
+                SizedBox(
+                  height: Get.height * 0.05,
+                  child: TextField(
+                    style: TextStyles.textStyle?.copyWith(fontSize: 16.sp),
+                    decoration: InputDecoration(
+                        hintText: 'Find or create tag...',
+                        border: OutlineInputBorder(),
+                        hintStyle: TextStyles.textStyle1
+                            ?.copyWith(fontSize: 17.sp, color: Colors.grey)),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    List<String> lst = [
+                      'Back Side',
+                      'Left',
+                      'Right',
+                      'Top',
+                      'Bottom',
+                      'Top to Bottom'
+                    ];
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Radio(
+                                value: true, groupValue: -1, onChanged: (v) {}),
+                            Text(
+                              lst[index],
+                              style: TextStyles.textStyle1,
+                            ),
+                          ],
+                        ),
+                        Icon(
+                          Icons.edit,
+                          color: Colors.grey,
+                          size: 18.sp,
+                        ),
+                      ],
+                    );
+                  }),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

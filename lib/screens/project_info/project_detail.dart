@@ -1,5 +1,6 @@
 import 'package:company_cam/core/Text_styles.dart';
 import 'package:company_cam/screens/project_info/collaburattors.dart';
+import 'package:company_cam/screens/project_info/create_share.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -124,8 +125,8 @@ class _ProjectDetailsState extends State<ProjectDetails>
             ),
             MyCustomTabs(),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
+              padding: const EdgeInsets.only(
+                left: 20,
               ),
               child: Stack(
                 children: [
@@ -222,10 +223,35 @@ class _ProjectDetailsState extends State<ProjectDetails>
                       },
                     ),
                   ),
+                  Positioned(
+                    right: 0,
+                    top: Get.height * 0.04,
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(CreateShareScreen());
+                      },
+                      child: SizedBox(
+                        height: Get.height * 0.05,
+                        width: Get.width * 0.13,
+                        child: const Card(
+                          elevation: 10,
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('2'),
+                                Icon(Icons.collections_bookmark_outlined)
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
-            Divider(),
+            const Divider(),
             TabBar(
               controller: _tabController,
               labelColor: Colors.black,
@@ -238,7 +264,7 @@ class _ProjectDetailsState extends State<ProjectDetails>
                 Tab(text: 'Documents'),
               ],
             ),
-            Divider(),
+            const Divider(),
             Expanded(
               child: TabBarView(
                 controller: _tabController,
@@ -359,12 +385,12 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
                   selectedIndex = index;
                 });
                 if (index == 0) {
-                  Get.to(AssignProject());
+                  Get.to(const AssignProject());
                 } else if (index == 1) {
                   showModalBottomSheet(
                     context: context,
                     isScrollControlled: true,
-                    shape: RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(20.0)),
                     ),
@@ -373,7 +399,7 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
                         padding: EdgeInsets.only(
                           bottom: MediaQuery.of(context).viewInsets.bottom,
                         ),
-                        child: ProjectContact(),
+                        child: const ProjectContact(),
                       );
                     },
                   );
@@ -383,7 +409,7 @@ class _MyCustomTabsState extends State<MyCustomTabs> {
                     builder: (context) => LabelBottomSheet(),
                   );
                 } else if (index == 3) {
-                  Get.to(CollaburatorsScreen());
+                  Get.to(const CollaburatorsScreen());
                 }
               },
               child: Container(
@@ -457,7 +483,7 @@ class _ProjectContactState extends State<ProjectContact> {
                         onTap: () {
                           Get.back();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back,
                           size: 20,
                         ),
@@ -470,25 +496,25 @@ class _ProjectContactState extends State<ProjectContact> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      SizedBox()
+                      const SizedBox()
                     ],
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 10,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Contact Name',
                   ),
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Phone Number',
                   ),
                 ),
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'Email Address',
                   ),
                 ),
@@ -514,11 +540,11 @@ class _ProjectContactState extends State<ProjectContact> {
                 ),
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.person_2_outlined,
                       size: 50,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     SizedBox(
@@ -538,7 +564,7 @@ class _ProjectContactState extends State<ProjectContact> {
             ),
             Column(
               children: [
-                Divider(
+                const Divider(
                   height: 20,
                 ),
                 Row(
@@ -600,12 +626,12 @@ class _LabelBottomSheetState extends State<LabelBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.only(
+      borderRadius: const BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20),
       ),
       child: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         height: 400.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -613,22 +639,22 @@ class _LabelBottomSheetState extends State<LabelBottomSheet> {
             Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.close),
+                  icon: const Icon(Icons.close),
                   onPressed: () => Navigator.pop(context),
                 ),
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   'Labels',
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                SizedBox(),
+                const Spacer(),
+                const SizedBox(),
               ],
             ),
-            Divider(),
+            const Divider(),
             Row(
               children: [
                 Expanded(
@@ -641,19 +667,19 @@ class _LabelBottomSheetState extends State<LabelBottomSheet> {
                         textStyle: const TextStyle(fontSize: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
-                          side: BorderSide(color: Colors.black),
+                          side: const BorderSide(color: Colors.black),
                         ),
                         fixedSize: const Size(double.infinity, 55)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.add_circle_outline,
                           size: 30,
                           color: Colors.blue,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
@@ -670,7 +696,7 @@ class _LabelBottomSheetState extends State<LabelBottomSheet> {
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Expanded(
               child: ListView(
                 children: _labels
@@ -702,7 +728,7 @@ class _LabelBottomSheetState extends State<LabelBottomSheet> {
         ],
       ),
       leading: Checkbox(
-        shape: CircleBorder(),
+        shape: const CircleBorder(),
         value: _selectedLabels.contains(label),
         onChanged: (bool? selected) {
           setState(() {
