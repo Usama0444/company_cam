@@ -51,7 +51,7 @@ class CollaburatorsScreen extends StatelessWidget {
           child: Column(children: [
             Container(
               width: double.infinity,
-              height: Get.height * 0.35,
+              height: Get.height * 0.36,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey),
                 borderRadius: BorderRadius.circular(15),
@@ -59,9 +59,9 @@ class CollaburatorsScreen extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.graphic_eq,
-                      size: 100,
+                      size: 40.sp,
                       color: Colors.grey,
                     ),
                     Text(
@@ -94,13 +94,14 @@ class CollaburatorsScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              fixedSize: const Size(200, 50)),
+                              fixedSize:
+                                  Size(Get.width * 0.5, Get.height * 0.06)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Icon(
+                              Icon(
                                 Icons.add,
-                                size: 20,
+                                size: 20.sp,
                               ),
                               const SizedBox(
                                 width: 10,
@@ -125,7 +126,7 @@ class CollaburatorsScreen extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: Get.height * 0.35,
+              height: Get.height * 0.36,
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.grey),
                 borderRadius: BorderRadius.circular(15),
@@ -133,9 +134,9 @@ class CollaburatorsScreen extends StatelessWidget {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.graphic_eq,
-                      size: 100,
+                      size: 40.sp,
                       color: Colors.grey,
                     ),
                     Text(
@@ -168,7 +169,8 @@ class CollaburatorsScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
-                              fixedSize: const Size(200, 50)),
+                              fixedSize:
+                                  Size(Get.width * 0.5, Get.height * 0.06)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [

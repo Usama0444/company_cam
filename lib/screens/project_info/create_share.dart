@@ -1,4 +1,5 @@
 import 'package:company_cam/core/Text_styles.dart';
+import 'package:company_cam/screens/widget/filter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -60,10 +61,20 @@ class CreateShareScreen extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Icon(
-                        Icons.filter_alt,
-                        size: 20.sp,
-                        color: Colors.black,
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              elevation: 0,
+                              builder: (builder) => FilterProjectsButton());
+                        },
+                        child: Icon(
+                          Icons.filter_alt,
+                          size: 20.sp,
+                          color: Colors.black,
+                        ),
                       ),
                     ],
                   ),

@@ -40,6 +40,7 @@ dependencies:
   dotted_border:
   persistent_bottom_nav_bar: ^5.0.2
   image_picker:
+  table_calendar:
 
 dev_dependencies:
   flutter_test:

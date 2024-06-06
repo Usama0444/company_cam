@@ -1,4 +1,5 @@
 import 'package:company_cam/core/Text_styles.dart';
+import 'package:company_cam/screens/create/create_project_by_camera.dart';
 import 'package:company_cam/screens/home/home_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -241,8 +242,9 @@ class _TabsViewPagesState extends State<TabsViewPages> {
             Padding(
               padding: const EdgeInsets.all(50),
               child: ElevatedButton(
-                onPressed: () {
-                  controller.getImage();
+                onPressed: () async {
+                  await controller.getImage();
+                  Get.to(CreateProjectByCameraScreen());
                 },
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue[900],

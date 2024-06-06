@@ -1,6 +1,7 @@
 import 'package:company_cam/core/Text_styles.dart';
 import 'package:company_cam/screens/home/home_controller.dart';
 import 'package:company_cam/screens/project_info/project_detail.dart';
+import 'package:company_cam/screens/widget/filter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
             title: Text(
@@ -100,7 +101,7 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
                         color: Colors.black,
                       ),
                     ),
-                    const Tab(text: ""),
+                    // const Tab(text: ""),
                   ],
                 ),
               ),
@@ -114,8 +115,12 @@ class _CompanyFeedScreenState extends State<CompanyFeedScreen> {
           ),
           backgroundColor: Colors.white,
           onPressed: () {
-            // Action for floating button
-            _onItemTapped(0); // Set to Photos tab
+            showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                builder: (builder) => FilterProjectsButton());
           },
           child: Icon(
             Icons.filter_alt,
@@ -610,10 +615,19 @@ class PhotoEditorScreen extends StatelessWidget {
           ],
         ),
         centerTitle: true,
-        actions: const [
-          Icon(
-            Icons.info_outline,
-            color: Colors.white,
+        actions: [
+          GestureDetector(
+            onTap: () {
+              showModalBottomSheet(
+                  backgroundColor: Colors.transparent,
+                  elevation: 0,
+                  context: context,
+                  builder: (builder) => infoDialog());
+            },
+            child: Icon(
+              Icons.info_outline,
+              color: Colors.white,
+            ),
           )
         ],
       ),
@@ -736,28 +750,72 @@ class PhotoEditorScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade100.withOpacity(0.5),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.check_circle_outline,
-                    color: Colors.white,
+                GestureDetector(
+                  onTap: () {
+                    Get.to(Scaffold(
+                        appBar: AppBar(),
+                        body: SizedBox(
+                            child: Image.asset(
+                          'assets/map.png',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.fill,
+                        ))));
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.map,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-                Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade100.withOpacity(0.5),
-                    shape: BoxShape.circle,
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        context: context,
+                        builder: (builder) => newTask());
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.check_circle_outline,
+                      color: Colors.white,
+                    ),
                   ),
-                  child: const Icon(
-                    Icons.more_horiz,
-                    color: Colors.white,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet(
+                        backgroundColor: Colors.transparent,
+                        elevation: 0,
+                        context: context,
+                        isScrollControlled: true,
+                        builder: (builder) => moreDialog());
+                  },
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade100.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.more_horiz,
+                      color: Colors.white,
+                    ),
                   ),
                 )
               ],
@@ -940,6 +998,251 @@ class PhotoEditorScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  Container infoDialog() {
+    return Container(
+      height: Get.height * 0.5,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.close)),
+                    Text(
+                      'Photo Details',
+                      style: TextStyles.h3,
+                    ),
+                    const SizedBox(),
+                  ],
+                ),
+                const Divider(
+                  height: 20,
+                ),
+              ],
+            ),
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text(
+                'Username',
+                style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+              ),
+              subtitle: Text(
+                'addrerss',
+                style: TextStyles.h4,
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 17.sp,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text(
+                'User profile',
+                style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+              ),
+              subtitle: Text(
+                'username',
+                style: TextStyles.h4,
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 17.sp,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.calendar_month),
+              title: Text(
+                'Date Captured',
+                style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+              ),
+              subtitle: Text(
+                '04-05-2024 . 3:55 PM',
+                style: TextStyles.h4,
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 17.sp,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.image_outlined),
+              title: Text(
+                'Image Resolution',
+                style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+              ),
+              subtitle: Text(
+                '1440 x 1990',
+                style: TextStyles.h4,
+              ),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                size: 17.sp,
+              ),
+            ),
+            ListTile(
+                title: Text(
+                  'Enable 360 photo viewers for this photo.',
+                  style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+                ),
+                trailing: Switch(value: false, onChanged: (v) {})),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container newTask() {
+    return Container(
+      height: Get.height * 0.3,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.close)),
+                  ],
+                ),
+                const Divider(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('New Task'),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Untitled Task',
+                          hintStyle: TextStyles.h1?.copyWith(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.w800,
+                          ),
+                          border: InputBorder.none,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blue[900],
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 16),
+                                  textStyle: const TextStyle(fontSize: 16),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  fixedSize: const Size(double.infinity, 55)),
+                              child: Text(
+                                'Create New Task',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container moreDialog() {
+    List<String> titles = [
+      "Share",
+      "Take After Photo",
+      "Choose After Photo",
+      "Print...",
+      "Share Gallery",
+      "Hide in Project Timeline",
+      "Duplicate",
+      "Move to Project",
+      "Save to Device",
+      "Set as Cover Photo",
+      "Move to Trash"
+    ];
+
+    List<IconData> icons = [
+      Icons.share,
+      Icons.camera_alt,
+      Icons.photo_library,
+      Icons.print,
+      Icons.collections,
+      Icons.visibility_off,
+      Icons.copy,
+      Icons.folder,
+      Icons.save_alt,
+      Icons.photo,
+      Icons.delete
+    ];
+    return Container(
+      height: Get.height * 0.8,
+      decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          )),
+      child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+              itemCount: icons.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Icon(icons[index]),
+                  title: Text(
+                    titles[index],
+                    style: TextStyles.h3?.copyWith(fontSize: 16.sp),
+                  ),
+                );
+              })),
     );
   }
 }

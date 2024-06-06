@@ -22,41 +22,54 @@ class AskLocation extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                width: double.infinity,
-                height: 10.h,
-                decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.grey),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.blue[700],
-                        shape: BoxShape.circle,
+              GestureDetector(
+                onTap: () {
+                  Get.to(Scaffold(
+                      appBar: AppBar(),
+                      body: SizedBox(
+                          child: Image.asset(
+                        'assets/map.png',
+                        width: double.infinity,
+                        height: double.infinity,
+                        fit: BoxFit.fill,
+                      ))));
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 10.h,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.blue[700],
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.location_on,
+                          color: Colors.white,
+                          size: 20.sp,
+                        ),
                       ),
-                      child: Icon(
-                        Icons.location_on,
-                        color: Colors.white,
+                      Text(
+                        'Enter a job Location',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                            fontSize: 18.sp, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(),
+                      Icon(
+                        Icons.arrow_forward_ios,
                         size: 20.sp,
                       ),
-                    ),
-                    Text(
-                      'Enter a job Location',
-                      textAlign: TextAlign.start,
-                      style: TextStyle(
-                          fontSize: 18.sp, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      size: 20.sp,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(

@@ -1,5 +1,4 @@
-import 'package:company_cam/screens/navbar_screen/company_feed.dart';
-import 'package:company_cam/screens/widget/bottom_nav.dart';
+import 'package:company_cam/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 20), // optional: to set title text style
           ),
         ),
-        home: CompanyFeedScreen(),
+        home: WelcomeScreen(),
       );
     });
   }

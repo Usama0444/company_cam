@@ -3,6 +3,7 @@ import 'package:company_cam/screens/home/home_controller.dart';
 import 'package:company_cam/screens/profile_info.dart';
 import 'package:company_cam/screens/project_info/project_detail.dart';
 import 'package:company_cam/screens/setting/setting.dart';
+import 'package:company_cam/screens/widget/filter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -129,8 +130,12 @@ class _AccountScreenState extends State<AccountScreen> {
           ),
           backgroundColor: Colors.white,
           onPressed: () {
-            // Action for floating button
-            _onItemTapped(0); // Set to Photos tab
+            showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                builder: (builder) => FilterProjectsButton());
           },
           child: Icon(
             Icons.filter_alt,
