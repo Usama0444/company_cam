@@ -59,7 +59,7 @@ class _ProjectDetailsState extends State<ProjectDetails>
                   width: 10,
                 ),
                 Text(
-                  'Islamabad',
+                  'Home Contract',
                   style: TextStyles.h2,
                 ),
               ],
@@ -76,7 +76,7 @@ class _ProjectDetailsState extends State<ProjectDetails>
                   width: 5,
                 ),
                 Text(
-                  'Lorum alpsum,abc,xyz',
+                  'Islamabad alpsum,abc,xyz',
                   style: TextStyles.textStyle2,
                 ),
               ],
@@ -124,159 +124,836 @@ class _ProjectDetailsState extends State<ProjectDetails>
               ],
             ),
             MyCustomTabs(),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-              ),
-              child: Stack(
+            // Padding(
+            //   padding: const EdgeInsets.only(
+            //     left: 20,
+            //   ),
+            //   child: Stack(
+            //     children: [
+            //       SizedBox(
+            //         width: double.infinity,
+            //         height: 150,
+            //         child: GridView.builder(
+            //           padding: EdgeInsets.zero,
+            //           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            //             crossAxisCount: 3,
+            //             mainAxisSpacing: 10.0,
+            //             crossAxisSpacing: 10.0,
+            //             childAspectRatio:
+            //                 Get.width / (Get.height - Get.height * 0.45),
+            //           ),
+            //           itemCount: 2,
+            //           itemBuilder: (context, index) {
+            //             return InkWell(
+            //               onTap: () {},
+            //               child: Container(
+            //                   height: 100,
+            //                   width: 50,
+            //                   decoration: BoxDecoration(
+            //                       image: const DecorationImage(
+            //                         image: AssetImage(
+            //                           'assets/dummy.jpeg',
+            //                         ),
+            //                         fit: BoxFit.cover,
+            //                       ),
+            //                       color: Colors.white,
+            //                       borderRadius: BorderRadius.circular(10),
+            //                       border: Border.all(
+            //                         color: Colors.grey,
+            //                       )),
+            //                   child: Column(
+            //                     mainAxisAlignment:
+            //                         MainAxisAlignment.spaceBetween,
+            //                     children: [
+            //                       index == 0
+            //                           ? Column(
+            //                               children: [
+            //                                 SizedBox(
+            //                                   height: 25.sp,
+            //                                 ),
+            //                                 Icon(
+            //                                   Icons.play_arrow,
+            //                                   size: 30.sp,
+            //                                   color: Colors.white,
+            //                                 ),
+            //                               ],
+            //                             )
+            //                           : const SizedBox(),
+            //                       Row(
+            //                         mainAxisAlignment: MainAxisAlignment.start,
+            //                         crossAxisAlignment:
+            //                             CrossAxisAlignment.start,
+            //                         children: [
+            //                           Container(
+            //                             width: 50,
+            //                             height: 30,
+            //                             decoration: BoxDecoration(
+            //                               color: Colors.black.withOpacity(0.3),
+            //                               borderRadius:
+            //                                   BorderRadius.circular(10),
+            //                             ),
+            //                             child: Row(
+            //                               mainAxisAlignment:
+            //                                   MainAxisAlignment.center,
+            //                               children: [
+            //                                 Container(
+            //                                   width: 20,
+            //                                   height: 20,
+            //                                   decoration: BoxDecoration(
+            //                                     color: Colors.white,
+            //                                     borderRadius:
+            //                                         BorderRadius.circular(10),
+            //                                   ),
+            //                                   child: Center(
+            //                                     child: Text(
+            //                                       'US',
+            //                                       style: TextStyles.textStyle1
+            //                                           ?.copyWith(fontSize: 12),
+            //                                     ),
+            //                                   ),
+            //                                 ),
+            //                               ],
+            //                             ),
+            //                           ),
+            //                         ],
+            //                       ),
+            //                     ],
+            //                   )),
+            //             );
+            //           },
+            //         ),
+            //       ),
+            //       Positioned(
+            //         right: 0,
+            //         top: Get.height * 0.04,
+            //         child: GestureDetector(
+            //           onTap: () {
+            //             Get.to(CreateShareScreen());
+            //           },
+            //           child: SizedBox(
+            //             height: Get.height * 0.05,
+            //             width: Get.width * 0.13,
+            //             child: const Card(
+            //               elevation: 10,
+            //               child: Center(
+            //                 child: Row(
+            //                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //                   children: [
+            //                     Text('2'),
+            //                     Icon(Icons.collections_bookmark_outlined)
+            //                   ],
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //       )
+            //     ],
+            //   ),
+            // ),
+            // const Divider(),
+            // TabBar(
+            //   controller: _tabController,
+            //   labelColor: Colors.black,
+            //   isScrollable: true,
+            //   tabs: const [
+            //     Tab(text: 'Tasks'),
+            //     Tab(text: 'Pages'),
+            //     Tab(text: 'Checklists'),
+            //     Tab(text: 'Reports'),
+            //     Tab(text: 'Documents'),
+            //   ],
+            // ),
+            // const Divider(),
+            // Expanded(
+            //   child: TabBarView(
+            //     controller: _tabController,
+            //     children: [
+            //       TasksTab(),
+            //       TasksTab(),
+            //       TasksTab(),
+            //       TasksTab(),
+            //       TasksTab(),
+            //     ],
+            //   ),
+            // ),
+
+            SizedBox(
+              width: double.infinity,
+              height: Get.height * 0.65,
+              child: ListView(
                 children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 150,
-                    child: GridView.builder(
-                      padding: EdgeInsets.zero,
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 10.0,
-                        crossAxisSpacing: 10.0,
-                        childAspectRatio:
-                            Get.width / (Get.height - Get.height * 0.45),
-                      ),
-                      itemCount: 2,
-                      itemBuilder: (context, index) {
-                        return InkWell(
-                          onTap: () {},
-                          child: Container(
-                              height: 100,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  image: const DecorationImage(
-                                    image: AssetImage(
-                                      'assets/dummy.jpeg',
-                                    ),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                    color: Colors.grey,
-                                  )),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.35,
                               child: Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  index == 0
-                                      ? Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 25.sp,
-                                            ),
-                                            Icon(
-                                              Icons.play_arrow,
-                                              size: 30.sp,
-                                              color: Colors.white,
-                                            ),
-                                          ],
-                                        )
-                                      : const SizedBox(),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      Container(
-                                        width: 50,
-                                        height: 30,
-                                        decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.3),
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              width: 20,
-                                              height: 20,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                              ),
-                                              child: Center(
-                                                child: Text(
-                                                  'US',
-                                                  style: TextStyles.textStyle1
-                                                      ?.copyWith(fontSize: 12),
-                                                ),
-                                              ),
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Save')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Priority repair : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
                                             ),
-                                          ],
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Work Order # : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Structure # : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('RT # ')),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 2, child: Text('Direction ')),
+                                      Expanded(
+                                        flex: 3,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 1, child: Text('MT # ')),
+                                      Expanded(
+                                        flex: 1,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
                                         ),
                                       ),
                                     ],
                                   ),
                                 ],
-                              )),
-                        );
-                      },
-                    ),
-                  ),
-                  Positioned(
-                    right: 0,
-                    top: Get.height * 0.04,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.to(CreateShareScreen());
-                      },
-                      child: SizedBox(
-                        height: Get.height * 0.05,
-                        width: Get.width * 0.13,
-                        child: const Card(
-                          elevation: 10,
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.35,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Reset')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Number of pictures ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('Start Date ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('End Date ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Checkbox(value: true, onChanged: (v) {}),
+                                      const Text('Close Out Doc')
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(const CreateShareScreen());
+                              },
+                              child: Container(
+                                  height: Get.height * 0.4,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'assets/house.png',
+                                      ),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue[900],
+                                          ),
+                                          child: Icon(Icons.close,
+                                              color: Colors.white, size: 30.sp),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
                               children: [
-                                Text('2'),
-                                Icon(Icons.collections_bookmark_outlined)
+                                const Expanded(
+                                    flex: 1, child: Text('Location ')),
+                                Expanded(
+                                  flex: 2,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          vertical: 10.sp, horizontal: 12.sp),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
-                          ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Description ')),
+                                Expanded(
+                                  flex: 2,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          vertical: 10.sp, horizontal: 12.sp),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.35,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Save')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Priority repair : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Work Order # : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Structure # : ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('RT # ')),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 2, child: Text('Direction ')),
+                                      Expanded(
+                                        flex: 3,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 1, child: Text('MT # ')),
+                                      Expanded(
+                                        flex: 1,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.35,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Reset')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1,
+                                          child: Text('Number of pictures ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('Start Date ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('End Date ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    vertical: 10.sp,
+                                                    horizontal: 12.sp),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Checkbox(value: true, onChanged: (v) {}),
+                                      const Text('Close Out Doc')
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(const CreateShareScreen());
+                              },
+                              child: Container(
+                                  height: Get.height * 0.4,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'assets/house.png',
+                                      ),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue[900],
+                                          ),
+                                          child: Icon(Icons.close,
+                                              color: Colors.white, size: 30.sp),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Location ')),
+                                Expanded(
+                                  flex: 2,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          vertical: 10.sp, horizontal: 12.sp),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Description ')),
+                                Expanded(
+                                  flex: 2,
+                                  child: TextField(
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                          vertical: 10.sp, horizontal: 12.sp),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
-            ),
-            const Divider(),
-            TabBar(
-              controller: _tabController,
-              labelColor: Colors.black,
-              isScrollable: true,
-              tabs: const [
-                Tab(text: 'Tasks'),
-                Tab(text: 'Pages'),
-                Tab(text: 'Checklists'),
-                Tab(text: 'Reports'),
-                Tab(text: 'Documents'),
-              ],
-            ),
-            const Divider(),
-            Expanded(
-              child: TabBarView(
-                controller: _tabController,
-                children: [
-                  TasksTab(),
-                  TasksTab(),
-                  TasksTab(),
-                  TasksTab(),
-                  TasksTab(),
-                ],
-              ),
-            ),
+            )
           ],
         ),
       ),

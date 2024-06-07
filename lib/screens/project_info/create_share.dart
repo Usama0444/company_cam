@@ -12,9 +12,14 @@ class CreateShareScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
-          size: 20.sp,
+        leading: GestureDetector(
+          onTap: () {
+            Get.back();
+          },
+          child: Icon(
+            Icons.arrow_back,
+            size: 20.sp,
+          ),
         ),
         centerTitle: true,
         title: Column(
