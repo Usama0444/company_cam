@@ -1,3 +1,4 @@
+import 'package:company_cam/screens/project_info/project_detail.dart';
 import 'package:company_cam/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

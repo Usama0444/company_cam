@@ -292,11 +292,11 @@ class _ProjectDetailsState extends State<ProjectDetails>
                           children: [
                             SizedBox(
                               width: double.infinity,
-                              height: Get.height * 0.35,
+                              height: Get.height * 0.25,
                               child: Column(
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       TextButton(
                                           onPressed: () {},
@@ -305,21 +305,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Priority repair : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Priority repair : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('P2'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -330,21 +331,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Work Order # : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Work Order # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('4564565'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -355,21 +357,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Structure # : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Structure # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('123124-121'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -387,16 +390,20 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       ),
                                       Expanded(
                                         flex: 1,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        child: Container(
+                                          width: Get.width * 0.05,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 5),
+                                                Text('206'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -406,17 +413,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       const Expanded(
                                           flex: 2, child: Text('Direction ')),
                                       Expanded(
-                                        flex: 3,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.2,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('South'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -426,17 +437,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       const Expanded(
                                           flex: 1, child: Text('MT # ')),
                                       Expanded(
-                                        flex: 1,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.1,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('92.52'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -447,11 +462,11 @@ class _ProjectDetailsState extends State<ProjectDetails>
                             ),
                             SizedBox(
                               width: double.infinity,
-                              height: Get.height * 0.35,
+                              height: Get.height * 0.25,
                               child: Column(
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       TextButton(
                                           onPressed: () {},
@@ -460,21 +475,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Number of pictures ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      Text('Number of pictures '),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('8'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -485,23 +500,26 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1, child: Text('Start Date ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.2,child: Text('Start Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-05-2024'),
+                                            ],
                                           ),
                                         ),
                                       ),
+
                                     ],
                                   ),
                                   const SizedBox(
@@ -509,27 +527,31 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1, child: Text('End Date ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.2,
+                                          child: Text('End Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-06-2024'),
+                                            ],
                                           ),
                                         ),
                                       ),
+
                                     ],
                                   ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Checkbox(value: true, onChanged: (v) {}),
                                       const Text('Close Out Doc')
@@ -578,14 +600,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                 const Expanded(
                                     flex: 1, child: Text('Location ')),
                                 Expanded(
-                                  flex: 2,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Us 26 Street right shoulder,main ,str # 2342'),
+                                        ],
                                       ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                          vertical: 10.sp, horizontal: 12.sp),
                                     ),
                                   ),
                                 ),
@@ -599,14 +628,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                 const Expanded(
                                     flex: 1, child: Text('Description ')),
                                 Expanded(
-                                  flex: 2,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Facing South Looking at park'),
+                                        ],
                                       ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                          vertical: 10.sp, horizontal: 12.sp),
                                     ),
                                   ),
                                 ),
@@ -626,11 +662,11 @@ class _ProjectDetailsState extends State<ProjectDetails>
                           children: [
                             SizedBox(
                               width: double.infinity,
-                              height: Get.height * 0.35,
+                              height: Get.height * 0.25,
                               child: Column(
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       TextButton(
                                           onPressed: () {},
@@ -639,21 +675,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Priority repair : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Priority repair : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('P2'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -664,21 +701,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Work Order # : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Work Order # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('4564565'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -689,21 +727,22 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Structure # : ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Structure # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('123124-121'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -721,16 +760,20 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       ),
                                       Expanded(
                                         flex: 1,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        child: Container(
+                                          width: Get.width * 0.05,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 5),
+                                                Text('206'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -740,17 +783,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       const Expanded(
                                           flex: 2, child: Text('Direction ')),
                                       Expanded(
-                                        flex: 3,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.2,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('South'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -760,17 +807,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                       const Expanded(
                                           flex: 1, child: Text('MT # ')),
                                       Expanded(
-                                        flex: 1,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.1,
+                                          height: 30,
+                                          decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(10),
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('92.52'),
+                                              ],
                                             ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
                                           ),
                                         ),
                                       ),
@@ -781,11 +832,11 @@ class _ProjectDetailsState extends State<ProjectDetails>
                             ),
                             SizedBox(
                               width: double.infinity,
-                              height: Get.height * 0.35,
+                              height: Get.height * 0.25,
                               child: Column(
                                 children: [
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       TextButton(
                                           onPressed: () {},
@@ -794,21 +845,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1,
-                                          child: Text('Number of pictures ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      Text('Number of pictures '),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('8'),
+                                            ],
                                           ),
                                         ),
                                       ),
@@ -819,23 +870,26 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1, child: Text('Start Date ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.2,child: Text('Start Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-05-2024'),
+                                            ],
                                           ),
                                         ),
                                       ),
+
                                     ],
                                   ),
                                   const SizedBox(
@@ -843,27 +897,31 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                   ),
                                   Row(
                                     children: [
-                                      const Expanded(
-                                          flex: 1, child: Text('End Date ')),
-                                      Expanded(
-                                        flex: 2,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10.sp,
-                                                    horizontal: 12.sp),
+                                      SizedBox(
+                                          width : Get.width * 0.2,
+                                          child: Text('End Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-06-2024'),
+                                            ],
                                           ),
                                         ),
                                       ),
+
                                     ],
                                   ),
                                   Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Checkbox(value: true, onChanged: (v) {}),
                                       const Text('Close Out Doc')
@@ -890,7 +948,7 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                     padding: const EdgeInsets.all(20),
                                     child: Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                      CrossAxisAlignment.end,
                                       children: [
                                         Container(
                                           decoration: BoxDecoration(
@@ -912,14 +970,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                 const Expanded(
                                     flex: 1, child: Text('Location ')),
                                 Expanded(
-                                  flex: 2,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Us 26 Street right shoulder,main ,str # 2342'),
+                                        ],
                                       ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                          vertical: 10.sp, horizontal: 12.sp),
                                     ),
                                   ),
                                 ),
@@ -933,14 +998,21 @@ class _ProjectDetailsState extends State<ProjectDetails>
                                 const Expanded(
                                     flex: 1, child: Text('Description ')),
                                 Expanded(
-                                  flex: 2,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Facing South Looking at park'),
+                                        ],
                                       ),
-                                      contentPadding: EdgeInsets.symmetric(
-                                          vertical: 10.sp, horizontal: 12.sp),
                                     ),
                                   ),
                                 ),
@@ -951,6 +1023,748 @@ class _ProjectDetailsState extends State<ProjectDetails>
                       ),
                     ),
                   ),
+
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.25,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Save')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Priority repair : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('P2'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Work Order # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('4564565'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Structure # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('123124-121'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('RT # ')),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          width: Get.width * 0.05,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 5),
+                                                Text('206'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 2, child: Text('Direction ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.2,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('South'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 1, child: Text('MT # ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.1,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('92.52'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.25,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Reset')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Number of pictures '),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('8'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.2,child: Text('Start Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-05-2024'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.2,
+                                          child: Text('End Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-06-2024'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Checkbox(value: true, onChanged: (v) {}),
+                                      const Text('Close Out Doc')
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(const CreateShareScreen());
+                              },
+                              child: Container(
+                                  height: Get.height * 0.4,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'assets/house.png',
+                                      ),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue[900],
+                                          ),
+                                          child: Icon(Icons.close,
+                                              color: Colors.white, size: 30.sp),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Location ')),
+                                Expanded(
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Us 26 Street right shoulder,main ,str # 2342'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Description ')),
+                                Expanded(
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Facing South Looking at park'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.25,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Save')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Priority repair : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('P2'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Work Order # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('4564565'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.25,child: Text('Structure # : ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('123124-121'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Expanded(
+                                          flex: 1, child: Text('RT # ')),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          width: Get.width * 0.05,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 5),
+                                                Text('206'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 2, child: Text('Direction ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.2,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('South'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Expanded(
+                                          flex: 1, child: Text('MT # ')),
+                                      Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          width: Get.width * 0.1,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(10),
+                                              border: Border.all()),
+                                          child: const Center(
+                                            child: Row(
+                                              children: [
+                                                SizedBox(width : 10),
+                                                Text('92.52'),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: Get.height * 0.25,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      TextButton(
+                                          onPressed: () {},
+                                          child: const Text('Reset')),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('Number of pictures '),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.2,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('8'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.2,child: Text('Start Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-05-2024'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          width : Get.width * 0.2,
+                                          child: Text('End Date ')),
+                                      SizedBox(width: 5,),
+                                      Container(
+                                        width: Get.width * 0.3,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                            BorderRadius.circular(10),
+                                            border: Border.all()),
+                                        child: const Center(
+                                          child: Row(
+                                            children: [
+                                              SizedBox(width : 10),
+                                              Text('12-06-2024'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Checkbox(value: true, onChanged: (v) {}),
+                                      const Text('Close Out Doc')
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Get.to(const CreateShareScreen());
+                              },
+                              child: Container(
+                                  height: Get.height * 0.4,
+                                  width: double.infinity,
+                                  decoration: const BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        'assets/house.png',
+                                      ),
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.blue[900],
+                                          ),
+                                          child: Icon(Icons.close,
+                                              color: Colors.white, size: 30.sp),
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Location ')),
+                                Expanded(
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Us 26 Street right shoulder,main ,str # 2342'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                const Expanded(
+                                    flex: 1, child: Text('Description ')),
+                                Expanded(
+                                  flex: 4,
+                                  child:  Container(
+                                    width: Get.width * 0.5,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                        BorderRadius.circular(10),
+                                        border: Border.all()),
+                                    child: const Center(
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width : 10),
+                                          Text('Facing South Looking at park'),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             )
